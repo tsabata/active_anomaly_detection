@@ -15,6 +15,7 @@ matplotlib = "^3.2.1"
 seaborn = "^0.10.1"
 numpy = "^1.18.4"
 scipy = "^1.4.1"
+imbalanced-learn = "^0.6.2"
 
 [tool.poetry.dev-dependencies]
 

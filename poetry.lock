@@ -120,6 +120,24 @@ version = "2.9"
 
 [[package]]
 category = "main"
+description = "Toolbox for imbalanced dataset in machine learning."
+name = "imbalanced-learn"
+optional = false
+python-versions = "*"
+version = "0.6.2"
+
+[package.dependencies]
+joblib = ">=0.11"
+numpy = ">=1.11"
+scikit-learn = ">=0.22"
+scipy = ">=0.17"
+
+[package.extras]
+docs = ["sphinx", "sphinx-gallery", "sphinx-rtd-theme", "sphinxcontrib-bibtex", "numpydoc", "matplotlib", "pandas"]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
+category = "main"
 description = "IPython Kernel for Jupyter"
 name = "ipykernel"
 optional = false
@@ -791,7 +809,7 @@ python-versions = "*"
 version = "0.5.1"
 
 [metadata]
-content-hash = "e41951e5dfd0c71172313982e373db35d84dd04c649c9a4c1ea8c9bfed4cdf19"
+content-hash = "058d06f1d48c893160b8209c74d28d76269dcdbe863af4412a2914bce702905b"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -845,6 +863,10 @@ future = [
 idna = [
     {file = "idna-2.9-py2.py3-none-any.whl", hash = "sha256:a068a21ceac8a4d63dbfd964670474107f541babbd2250d61922f029858365fa"},
     {file = "idna-2.9.tar.gz", hash = "sha256:7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb"},
+]
+imbalanced-learn = [
+    {file = "imbalanced-learn-0.6.2.tar.gz", hash = "sha256:942b9a7f2e1df831097fbee587c5c90a4cc6afa6105b23d3e30d8798f1a9b17d"},
+    {file = "imbalanced_learn-0.6.2-py3-none-any.whl", hash = "sha256:1d5918619317f8fe4065148b9a5758fb999b82eedf665079d73e0c392767d1dd"},
 ]
 ipykernel = [
     {file = "ipykernel-5.2.1-py3-none-any.whl", hash = "sha256:003c9c1ab6ff87d11f531fee2b9ca59affab19676fc6b2c21da329aef6e73499"},
