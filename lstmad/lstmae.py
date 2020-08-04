@@ -126,9 +126,13 @@ def train_model(model, train_dataset, val_dataset, n_epochs, device):
         val_loss = np.mean(val_losses)
         history['train'].append(train_loss)
         history['val'].append(val_loss)
+        print(f'Epoch {epoch}: train loss {train_loss} val loss {val_loss}')
+        if train_loss < val_loss * 0.95 and epoch > 50:
+            print(f'Epoch {epoch}: train loss {train_loss} val loss {val_loss}')
+            print('Overfitted. Training stopped')
+            break
         if val_loss < best_loss:
             best_loss = val_loss
             best_model_wts = copy.deepcopy(model.state_dict())
-        print(f'Epoch {epoch}: train loss {train_loss} val loss {val_loss}')
     model.load_state_dict(best_model_wts)
     return model.eval(), history
